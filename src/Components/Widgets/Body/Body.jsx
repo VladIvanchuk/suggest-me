@@ -1,7 +1,9 @@
 import s from "./Body.module.scss";
-
-const Body = () => {
-  return <div className={s.body}>Body</div>;
+import { SuggestMe } from "../";
+export const Body = () => {
+  return (
+    <div className={s.body}>
+      <SuggestMe />
+    </div>
+  );
 };
-
-export default Body;

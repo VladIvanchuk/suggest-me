@@ -1,8 +1,7 @@
 import s from "./Header.module.scss";
-import Logo from "../Logo/Logo";
-import Navbar from "../Navbar/Navbar";
+import { Navbar, Logo } from "../";
 
-const Header = () => {
+export const Header = () => {
   return (
     <header className={s.header}>
       <div className={s.container}>
@@ -12,5 +11,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;
