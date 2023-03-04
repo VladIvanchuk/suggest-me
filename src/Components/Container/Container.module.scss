@@ -1,0 +1,6 @@
+@use "../../assets/utils/vars.scss";
+
+.container {
+  max-width: vars.$containerWidth;
+  margin: 0 auto;
+}

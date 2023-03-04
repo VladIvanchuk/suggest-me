@@ -1,0 +1,12 @@
+@import "assets/base.scss";
+
+body, html {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+
+  background-color: $bodyBg;
+  background-image: $bodyImg;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}

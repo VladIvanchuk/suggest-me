@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Movie",
+    "path": "/movie",
+    "id": 0
+  },
+  {
+    "title": "TV Shows",
+    "path": "/tv",
+    "id": 1
+  }
+]

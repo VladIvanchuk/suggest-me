@@ -1,0 +1,8 @@
+@use "../../assets/utils/vars.scss";
+
+.header {
+  background: vars.$headerBg;
+
+  width: 100%;
+  padding: 16px 0;
+}
