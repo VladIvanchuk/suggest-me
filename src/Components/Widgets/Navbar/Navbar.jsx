@@ -4,10 +4,13 @@ const Navbar = () => {
   return (
     <div className={s.navbar}>
       <a href="/" className={s.link}>
-        Movie
+        Movies
       </a>
       <a href="/" className={s.link}>
-        TV Show
+        TV Shows
+      </a>
+      <a href="/" className={s.link}>
+        Suggest me
       </a>
     </div>
   );

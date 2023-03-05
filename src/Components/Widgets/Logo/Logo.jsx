@@ -1,11 +1,10 @@
 import s from "./Logo.module.scss";
-import icon from "../../../assets/images/icon-film.svg";
+import icon from "../../../assets/images/logo.svg";
 
 const Logo = () => {
   return (
     <div className={s.logo}>
       <img src={icon} alt="logo" />
-      Filmoteka
     </div>
   );
 };
