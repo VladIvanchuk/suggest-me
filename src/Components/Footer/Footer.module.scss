@@ -1,0 +1,17 @@
+@use "../../scss" as *;
+.Footer {
+  @include flex(center, center);
+  flex-direction: column;
+  margin-top: 64px;
+  span {
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  button {
+    padding: 16px 32px;
+    color: white;
+    background: #7b6ef6;
+    border-radius: 12px;
+  }
+}

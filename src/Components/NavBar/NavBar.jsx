@@ -1,13 +1,15 @@
 import React from "react";
 
-import './navBar.scss';
+import s from './navBar.module.scss';
+
+import svgMaker from "../../svgMaker";
 
 const NavBar = () => {
   return (
-    <div className="navBar">
-      <a href="">Movies</a>
-      <a href="">TV Shows</a>
-      <a href="">Suggest me </a>
+    <div className={s.navBar}>
+      <a href="/">Movies</a>
+      <a href="/">TV Shows</a>
+      <a href="/">Suggest me <sub>{svgMaker("arrow", s.icon)}</sub> </a>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-@use "./scss" as *;
+@use "../scss" as *;
 
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&family=Poppins:wght@400;600&display=swap");
@@ -16,15 +16,13 @@ html {
   line-height: 24px;
   letter-spacing: 0.02rem;
   background: #121829;
-  background-image:url(./assets/img/Background.png);
+  background-image:url(../assets/img/Background.png);
   background-size: cover;
   background-repeat: no-repeat;
-  //   background: rgba(18, 24, 41, 0.8);
   backdrop-filter: blur(20px);
 }
 body {
-  color: $txt-color;
-  
+  color: $txt-color;  
 }
 a {
   text-decoration: none;
@@ -46,4 +44,8 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.App {
+  padding-bottom:70px ;
 }

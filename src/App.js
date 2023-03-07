@@ -1,15 +1,13 @@
-import "./App.scss";
-import Ganre from "./Components/Ganre/Ganre";
-import Header from "./Components/Header/Header";
-import SuggestMe from './Components/SuggestMe/SuggestMe'
+import {Header, Body, Footer} from './Components';
+
 
 function App() {
   return (
     <div className="App">
       <div className="container">
-        <Header></Header>
-        <SuggestMe></SuggestMe>
-        {/* <Ganre></Ganre> */}
+        <Header />
+        <Body/>
+        <Footer />
       </div>
     </div>
   );

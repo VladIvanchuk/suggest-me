@@ -1,34 +1,111 @@
-import React from "react";
+import React, { useState } from "react";
 
-import "./ganre.scss";
+import s from "./ganre.module.scss";
 
-const Ganre = () => {
+function Ganre() {
+  const [selected, setSelected] = useState("label1");
+
+  const handleRadioChange = (event) => {
+    setSelected(event.target.value);
+  };
+
   return (
-    <div className="ganre">
-      <label htmlFor="">
-        <label htmlFor="any">
-          <input type="radio" id="any" name="genre" value="any"  />
+    <div className={s.Ganre}>
+      <div className={s.Ganre__inputs}>
+        <input
+          type="radio"
+          name="options"
+          id="Any"
+          value="label1"
+          checked={selected === "label1"}
+          onChange={handleRadioChange}
+        />
+        <label className={s.inputLable} htmlFor="Any">
           Any
         </label>
-        <label htmlFor="action">
-          <input type="radio" id="action" name="genre" value="action" />
+
+        <input
+          type="radio"
+          name="options"
+          id="Action"
+          value="label2"
+          checked={selected === "label2"}
+          onChange={handleRadioChange}
+        />
+        <label className={s.inputLable} htmlFor="Action">
           Action
         </label>
-        <label htmlFor="horror">
-          <input type="radio" id="horror" name="genre" value="horror" />
+
+        <input
+          type="radio"
+          name="options"
+          id="Horror"
+          value="label3"
+          checked={selected === "label3"}
+          onChange={handleRadioChange}
+        />
+        <label className={s.inputLable} htmlFor="Horror">
           Horror
         </label>
-        <label htmlFor="drama">
-          <input type="radio" id="drama" name="genre" value="drama" />
+
+        <input
+          type="radio"
+          name="options"
+          id="Drama"
+          value="label4"
+          checked={selected === "label4"}
+          onChange={handleRadioChange}
+        />
+        <label className={s.inputLable} htmlFor="Drama">
           Drama
         </label>
-        <label htmlFor="comedy">
-          <input type="radio" id="comedy" name="genre" value="comedy" />
+
+        <input
+          type="radio"
+          name="options"
+          id="Comedy"
+          value="label5"
+          checked={selected === "label5"}
+          onChange={handleRadioChange}
+        />
+        <label className={s.inputLable} htmlFor="Comedy">
           Comedy
         </label>
-      </label>
+      </div>
+      <div className={s.Ganre__labelContainer}>
+        <label
+          id="Any"
+          style={{ display: selected === "label1" ? "block" : "none" }}
+        >
+          Any<sub>(120)</sub>
+        </label>
+        <label
+          id="Action"
+          style={{ display: selected === "label2" ? "block" : "none" }}
+        >
+          Action<sub>(120)</sub>
+        </label>
+        <label
+          id="Horror"
+          style={{ display: selected === "label3" ? "block" : "none" }}
+        >
+          Horror<sub>(120)</sub>
+        </label>
+        <label
+          id="Drama"
+          style={{ display: selected === "label4" ? "block" : "none" }}
+        >
+          Drama<sub>(120)</sub>
+        </label>
+        <label
+          id="Comedy"
+          style={{ display: selected === "label5" ? "block" : "none" }}
+        >
+          Comedy<sub>(120)</sub>
+        </label>
+      </div>
     </div>
   );
-};
+}
 
 export default Ganre;

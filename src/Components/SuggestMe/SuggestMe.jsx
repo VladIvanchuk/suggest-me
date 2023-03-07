@@ -1,12 +1,12 @@
 import React from "react";
 
-import "./suggestMe.scss";
+import s from "./suggestMe.module.scss";
 
 const SuggestMe = () => {
   return (
-    <div className="suggestMe">
-      <h1 className="suggestMe__title">Suggest.me</h1>
-      <div className="suggestMe__txt">
+    <div className={s.suggestMe}>
+      <h1 className={s.suggestMe__title}>Suggest.me</h1>
+      <div className={s.suggestMe__txt}>
         <p> Discover new and exciting movies with Suggest.me!</p>
 
         <p>

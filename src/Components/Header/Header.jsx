@@ -1,16 +1,16 @@
 import React from 'react';
-import Logo from '../Logo/Logo';
-import NavBar from '../NavBar/NavBar';
+import {Logo, NavBar} from '../../Components';
 
-import './header.scss';
+
+import s from'./header.module.scss';
 
 export const Header = () => {
   return (
-    <header className='header'>
-            <div className="header__logo logo">
+    <header className={s.header}>
+            <div className={s.header__logo}>
                 <Logo></Logo>
             </div>
-            <div className="header__navBar navBar">
+            <div className={s.header__navBar}>
                 <NavBar></NavBar>
             </div>
     </header>
