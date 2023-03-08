@@ -1,4 +1,3 @@
-import React from 'react';
 import classNames from "classnames";
 import rightArrow from "../../assets/images/arrow-right.svg";
 import listMenu from './ListMenu.json';
@@ -16,7 +15,7 @@ const Menu = () => (
     ))}
 
     <li>
-      <a href="/suggest" className={classNames(s.menu__link, s.menu__suggest)}>
+      <a href="/suggest" className={classNames(s.menu__link)}>
         Suggest me
         <img
           className={s.menu__rightArrow}

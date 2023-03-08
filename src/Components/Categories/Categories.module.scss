@@ -1,0 +1,43 @@
+@use "../../assets/utils/vars";
+@use "../../assets/utils/mixins";
+
+.category {
+  @include mixins.flex-container;
+  flex-wrap: wrap;
+
+  max-width: fit-content;
+  padding: 8px;
+
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(40px);
+  border-radius: 12px;
+
+  &__item {
+    display: block;
+  }
+
+  &__option {
+    display: block;
+    cursor: pointer ;
+
+    border-radius: 8px;
+    padding: 8px 32px;
+
+    color: vars.$mainColor;
+    @include mixins.default-semibold-text;
+
+    &:hover {
+      color: #fff;
+      transition: color ease-in-out 0.27s;
+    }
+  }
+
+  &__active {
+    background-color: #7b6ef6;
+    color: #fff;
+  }
+
+  &__mark {
+    display: none;
+  }
+}

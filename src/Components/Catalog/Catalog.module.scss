@@ -1,0 +1,14 @@
+@use "./../../assets/utils/mixins";
+
+.catalog {
+  padding-bottom: 64px;
+
+  &__title {
+    @include mixins.default-semibold-text;
+    font-size: 32px;
+    line-height: 40px;
+    color: #767e94;
+
+    padding: 24px 0;
+  }
+}

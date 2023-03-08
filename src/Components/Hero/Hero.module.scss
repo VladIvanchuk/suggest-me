@@ -1,0 +1,29 @@
+@use "../../assets/utils/vars";
+@use "../../assets/utils/mixins";
+
+.hero {
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 80px;
+  padding-bottom: 72px;
+
+  max-width: 588px;
+  max-height: 240px;
+
+  &__heading {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 80px;
+    letter-spacing: -0.02em;
+    color: #ebeef5;
+  }
+
+  &__text {
+    @include mixins.default-semibold-text;
+    font-weight: 400;
+    color: vars.$mainColor;
+  }
+}

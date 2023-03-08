@@ -1,0 +1,27 @@
+@use "../../assets/utils/mixins";
+
+.rate {
+  @include mixins.flex-container;
+
+  position: absolute;
+  top: 18px;
+  left: 16px;
+
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  padding: 8px;
+
+  color: #ffad49;
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    fill: #ffad49;
+  }
+
+  &__amount {
+    margin-left: 4px;
+    line-height: 24px;
+  }
+}

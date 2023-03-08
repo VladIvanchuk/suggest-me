@@ -1,6 +1,4 @@
-import React from 'react';
 import icon from '../../assets/images/icon.svg';
-
 import s from './Logo.module.scss';
 
 const Logo = () => (

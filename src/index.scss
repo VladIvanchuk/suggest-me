@@ -2,11 +2,12 @@
 
 body, html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
   font-family: "Poppins", sans-serif;
 
   background-color: $bodyBg;
   background-image: $bodyImg;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: center -300px;
 }

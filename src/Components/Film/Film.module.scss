@@ -1,0 +1,32 @@
+@use "./../../assets/utils/vars";
+@use "../../assets/utils/mixins";
+.film {
+  @include mixins.flex-container;
+  flex-direction: column;
+  position: relative;
+
+  text-decoration: none;
+
+  background-color: rgba(32, 40, 62, 0.8);
+  backdrop-filter: blur(40px);
+  border-radius: 12px;
+
+  max-width: vars.$cardWidth;
+  max-height: 480px;
+  margin-bottom: 20px;
+
+  &__image {
+    max-width: 266px;
+    max-height: 400px;
+    padding: 8px 8px 0 8px;
+  }
+
+  &__title {
+    @include mixins.default-semibold-text;
+    text-align: left;
+    color: #ebeef5;
+
+    width: 100%;
+    padding: 24px 0 24px 16px;
+  }
+}

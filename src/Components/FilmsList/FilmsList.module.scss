@@ -1,0 +1,9 @@
+@use "./../../assets/utils/vars";
+
+.filmsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, vars.$cardWidth);
+  grid-column-gap: 10px;
+
+  justify-content: space-between;
+}
