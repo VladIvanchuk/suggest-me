@@ -3,3 +3,8 @@ export { Navbar } from "./Navbar/Navbar";
 export { Logo } from "./Logo/Logo";
 export { Body } from "./Body/Body";
 export { SuggestMe } from "./SuggestMe/SuggestMe";
+export { Filter } from "./Filter/Filter";
+export { Movie } from "./Movies/Movie";
+export { MoviesWrapper } from "./Movies/MoviesWrapper";
+export { More } from "./More/More";
+export { Button } from "./Button/Button";

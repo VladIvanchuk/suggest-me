@@ -13,7 +13,7 @@ export const SuggestMe = () => {
           easy to find your next favorite.
           <br />
           <br />
-          Give it a try and see what the algorithm suggests for you
+          Give it a try and see what the algorithm suggests for you 😉
         </p>
       </div>
     </div>
