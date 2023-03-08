@@ -5,23 +5,25 @@
 }
 
 .link {
-  position: relative;
-  font-weight: 500;
-  font-size: 12px;
+  font-weight: 600;
+  font-size: 16px;
   line-height: 14px;
-  text-transform: uppercase;
-  color: #ffffff;
+  color: #A8AEBF;
   text-decoration: none;
 }
+.navbar img
+{
 
-.link:first-child {
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 105%;
-    height: 1px;
-    background-color: #ff6b08;
-  }
+  width: 4%;
 }
+// .link:first-child {
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     bottom: -2px;
+//     left: 0;
+//     width: 105%;
+//     height: 1px;
+//     background-color: #ff6b08;
+//   }
+// }
