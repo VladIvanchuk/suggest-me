@@ -1,4 +1,4 @@
-import { Button } from "../Button/Button";
+import { Button } from "../../UI/Button/Button";
 import s from "./More.module.scss";
 
 export const More = () => {

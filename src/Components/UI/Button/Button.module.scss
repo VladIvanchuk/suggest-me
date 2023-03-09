@@ -1,7 +1,7 @@
 @import "../../../assets/styles/helpers";
 
 .primary {
-  background: #7b6ef6;
+  background: $btn-color;
   border-radius: 12px;
   padding: 16px 32px;
   font-weight: 400;
@@ -12,4 +12,8 @@
   color: #ffffff;
   display: block;
   width: fit-content;
+
+  &:hover {
+    background: #6958ff;
+  }
 }

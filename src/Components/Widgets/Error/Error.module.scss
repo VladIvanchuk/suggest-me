@@ -1,0 +1,30 @@
+@import "../../../assets/styles/helpers";
+
+.wrapper {
+  @include flex-full-center;
+  flex-direction: column;
+  text-align: center;
+  img {
+    width: 400px;
+    margin-top: 120px;
+    margin-bottom: 40px;
+  }
+}
+.text {
+  width: 588px;
+  margin-bottom: 24px;
+  h1 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+    color: $txt-color-main;
+    margin-bottom: 16px;
+  }
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $txt-color-secondary;
+  }
+}

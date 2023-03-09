@@ -1,0 +1,52 @@
+@import "../../../assets/styles/helpers";
+
+.wrapper {
+  padding: 0 80px;
+  @include flex(null, sb);
+  margin-bottom: 160px;
+}
+.photo {
+  width: 480px;
+  height: 720px;
+  background: linear-gradient(
+    180deg,
+    rgba(54, 44, 146, 0.4) 0%,
+    rgba(18, 98, 151, 0.4) 100%
+  );
+  border-radius: 24px;
+}
+.mark {
+  width: fit-content;
+}
+.info {
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.015em;
+    color: $txt-color-main;
+  }
+  p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: $txt-color-secondary;
+  }
+}
+.title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #767e94;
+  margin-bottom: 8px;
+}
+.text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #c3c8d4;
+}

@@ -14,15 +14,10 @@ const movies = [
 
 export const MoviesWrapper = () => {
   return (
-    <>
-      <h2 className={s.header}>
-        Any <span>(120)</span>
-      </h2>
-      <div className={s.wrapper}>
-        {movies.map((movie) => (
-          <Movie key={movie.id} {...movie} />
-        ))}
-      </div>
-    </>
+    <div className={s.wrapper}>
+      {movies.map((movie) => (
+        <Movie key={movie.id} {...movie} />
+      ))}
+    </div>
   );
 };

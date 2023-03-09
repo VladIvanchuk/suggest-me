@@ -1,12 +1,14 @@
 import s from "./App.module.scss";
-import { Header, Body } from "./Components/Widgets";
+import { Header, Details, Home, NotFound } from "./Components";
 
 function App() {
   return (
     <div className={s.app}>
       <Header />
       <div className={s.body_container}>
-        <Body />
+        {/* <Home /> */}
+        <Details />
+        {/* <NotFound /> */}
       </div>
     </div>
   );

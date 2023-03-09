@@ -1,0 +1,16 @@
+export { Header } from "./UI/Header/Header";
+export { Navbar } from "./UI/Navbar/Navbar";
+export { Logo } from "./UI/Logo/Logo";
+export { SuggestMe } from "./Widgets/SuggestMe/SuggestMe";
+export { Filter } from "./Widgets/Filter/Filter";
+export { Movie } from "./Widgets/Movies/Movie";
+export { MoviesWrapper } from "./Widgets/Movies/MoviesWrapper";
+export { More } from "./Widgets/More/More";
+export { Button } from "./UI/Button/Button";
+export { Mark } from "./UI/Mark/Mark";
+export { Home } from "./Pages/Home";
+export { Details } from "./Pages/Details";
+export { DetailsHero } from "./Widgets/DetailsHero/DetailsHero";
+export { DetailsBody } from "./Widgets/DetailsBody/DetailsBody";
+export { Error } from "./Widgets/Error/Error";
+export { NotFound } from "./Pages/NotFound";

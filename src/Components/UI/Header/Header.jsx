@@ -1,5 +1,5 @@
 import s from "./Header.module.scss";
-import { Navbar, Logo } from "../";
+import { Navbar, Logo } from "../../";
 
 export const Header = () => {
   return (
