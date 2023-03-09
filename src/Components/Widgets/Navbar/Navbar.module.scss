@@ -1,0 +1,15 @@
+@import "../../../assets/styles/styles";
+.navbar {
+  @include flex(center, null);
+  gap: 16px;
+}
+
+.link {
+  position: relative;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: $txt-color-nav;
+  text-decoration: none;
+  padding: 12px 16px;
+}

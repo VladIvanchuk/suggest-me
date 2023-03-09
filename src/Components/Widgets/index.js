@@ -1,0 +1,10 @@
+export { Header } from "./Header/Header";
+export { Navbar } from "./Navbar/Navbar";
+export { Logo } from "./Logo/Logo";
+export { Body } from "./Body/Body";
+export { SuggestMe } from "./SuggestMe/SuggestMe";
+export { Any } from "./Any/Any";
+export { Movie } from "./Movies/Movie";
+export { Wrapper } from "./Movies/Wrapper";
+export { Footer } from "./Footer/Footer";
+export { Button } from "./Button/Button";

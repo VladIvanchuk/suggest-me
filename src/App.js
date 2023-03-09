@@ -1,6 +1,5 @@
-import s  from "./App.module.scss";
-import Header from "./Components/Widgest/Header/Header";
-import Body from "./Components/Widgest/Body/Body";
+import s from "./App.module.scss";
+import { Header, Body } from "./Components/Widgets";
 
 function App() {
   return (

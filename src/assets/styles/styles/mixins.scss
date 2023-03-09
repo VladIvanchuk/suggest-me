@@ -1,0 +1,22 @@
+@mixin full-size {
+  width: 100%;
+  height: 100%;
+}
+@mixin flex-full-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex($algin, $justify) {
+  display: flex;
+  align-items: $algin;
+  @if $justify == sb {
+    justify-content: space-between;
+  } @else if $justify == sa {
+    justify-content: space-around;
+  } @else if $justify == se {
+    justify-content: space-evenly;
+  } @else if $justify == ce {
+    justify-content: center;
+  }
+}

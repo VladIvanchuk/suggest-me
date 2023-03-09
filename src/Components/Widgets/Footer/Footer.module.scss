@@ -1,0 +1,14 @@
+@import "../../../assets/styles/styles";
+
+.wrapper {
+  text-align: center;
+  @include flex-full-center;
+  flex-direction: column;
+  margin-bottom: 70px;
+  h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #767e94;
+    margin: 0 0 24px 0;
+  }
+}
