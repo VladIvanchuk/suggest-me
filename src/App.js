@@ -1,13 +1,13 @@
-import {Header, Body, Footer} from './Components';
-
+import { Header,Home,Details,Error } from "./Components";
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <div className="container">
-        <Header />
-        <Body/>
-        <Footer />
+        {/* <Home /> */}
+        {/* <Error /> */}
+        <Details />
       </div>
     </div>
   );
