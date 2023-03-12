@@ -1,4 +1,4 @@
-import sprite from "./assets/images/sprite.svg";
+import sprite from '../src/assets/images/sprite.svg';
 
 const svgMaker = (svg, className) => {
   return (
