@@ -7,6 +7,10 @@ import Container from "../Container/Container";
 
 const Categories = () => {
   const [category, setCategory] = useState("any");
+  const handleClick = (e) => {
+    setCategory(e.target.name);
+    console.log(category)
+  }
 
   return (
     <Container>
@@ -14,8 +18,8 @@ const Categories = () => {
         <li className={s.category__item}>
           <label
             htmlFor="any"
-            className={classNames(s.category__option, s.category__active)}
-            id=""
+            className={classNames(s.category__option)}
+            id="labelAny"
           >
             Any
             <input
@@ -23,7 +27,7 @@ const Categories = () => {
               id="any"
               name="any"
               className={s.category__mark}
-              onClick={() => (setCategory("any"))}
+              onClick={handleClick}
             />
           </label>
         </li>
@@ -37,8 +41,7 @@ const Categories = () => {
                 id={title.toLowerCase()}
                 name={title.toLowerCase()}
                 className={s.category__mark}
-                value={category}
-                onClick={() => (setCategory(title.toLowerCase()))}
+                onClick={handleClick}
               />
             </label>
           </li>

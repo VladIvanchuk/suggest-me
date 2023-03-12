@@ -2,41 +2,49 @@
   {
     "id": 0,
     "title": "Black Widow",
-    "rate": 6.8
+    "rate": 6.8,
+    "category": ["comedy", "drama"]
   },
   {
     "id": 1,
     "title": "Shang Chi",
-    "rate": 7.9
+    "rate": 7.9,
+    "category": ["comedy", "drama"]
   },
   {
     "id": 2,
     "title": "Loki",
-    "rate": 8.4
+    "rate": 8.4,
+    "category": ["comedy", "drama"]
   },
   {
     "id": 3,
     "title": "How I Met Your Mother",
-    "rate": 8.3
+    "rate": 8.3,
+    "category": ["comedy", "drama"]
   },
   {
     "id": 4,
     "title": "Money Heist",
-    "rate": 8.3
+    "rate": 8.3,
+    "category": ["comedy", "drama"]
   },
   {
     "id": 5,
     "title": "Friends",
-    "rate": 8.8
+    "rate": 8.8,
+    "category": ["comedy", "drama"]
   },
   {
     "id": 6,
     "title": "The Big Bang Theory",
-    "rate": 8.1
+    "rate": 8.1,
+    "category": ["comedy", "drama"]
   },
   {
     "id": 7,
     "title": "Two And a Half Men",
-    "rate": 7
+    "rate": 7,
+    "category": ["comedy", "drama"]
   }
 ]

@@ -3,20 +3,18 @@
 .rate {
   @include mixins.flex-container;
 
-  position: absolute;
-  top: 18px;
-  left: 16px;
-
   background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(4px);
   border-radius: 8px;
   padding: 8px;
 
+  max-width: fit-content;
+
   color: #ffad49;
 
   &__icon {
-    width: 16px;
-    height: 16px;
+    width: 13px;
+    height: 13px;
     fill: #ffad49;
   }
 

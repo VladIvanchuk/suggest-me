@@ -24,7 +24,9 @@ const allFilms = [
 const Film = ({id, title, rate}) => (
   <li>
     <a className={s.film} href={`/movie/${title}`}>
-      <Rate rate={rate}/>
+      <div className={s.film__rate}>
+        <Rate rate={rate} />
+      </div>
       <img
         className={s.film__image}
         src={allFilms[id]}

@@ -1,5 +1,6 @@
 import s from "./Rate.module.scss";
 import SvgMaker from "./../SvgMaker/SvgMaker"
+
 const Rate = ({rate}) => (
   <div className={s.rate}>
     {SvgMaker("icon-star-empty", s.rate__icon)}

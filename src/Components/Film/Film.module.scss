@@ -15,6 +15,12 @@
   max-height: 480px;
   margin-bottom: 20px;
 
+  &__rate {
+    position: absolute;
+    top: 18px;
+    left: 16px;
+  }
+
   &__image {
     max-width: 266px;
     max-height: 400px;
