@@ -13,7 +13,7 @@ export const Error = () => {
           exist.
         </p>
       </div>
-      <Button name="Go Home" />
+      <Button name="Go Home" link="/" />
     </div>
   );
 };

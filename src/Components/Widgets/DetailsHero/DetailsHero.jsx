@@ -1,13 +1,14 @@
 import s from "./DetailsHero.module.scss";
 
-export const DetailsHero = () => {
+export const DetailsHero = ({ genre, name, img }) => {
   return (
     <div className={s.wrapper}>
       <div className={s.photo}>
-        <div className={s.info}>
-          <span className={s.genre}>Action</span>
-          <h2 className={s.name}>Avengers: Endgame</h2>
-        </div>
+        <img src={img} alt="" />{" "}
+      </div>
+      <div className={s.info}>
+        <span className={s.genre}>{genre}</span>
+        <h2 className={s.name}>{name}</h2>
       </div>
     </div>
   );

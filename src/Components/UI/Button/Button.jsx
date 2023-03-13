@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import s from "./Button.module.scss";
 
-export const Button = ({ name }) => {
+export const Button = ({ name, link }) => {
   return (
-    <a className={s.primary} href="/">
+    <Link className={s.primary} to={link}>
       <span>{name}</span>
-    </a>
+    </Link>
   );
 };
