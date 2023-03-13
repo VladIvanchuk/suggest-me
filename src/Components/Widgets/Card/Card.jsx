@@ -1,14 +1,18 @@
 import s from "./Card.module.scss";
 import { Mark } from "../..";
 
+const Card = ({ data = {} }) => {
+  const { mark, movieType, posterAvatar } = data;
 
-const Card = ({filmName, markNum}) => {
   return (
     <div className={s.Card}>
       <div className={s.image}>
-        <Mark markNum = {markNum}/>
+        <div className={s.mark}>
+          <Mark markNum={mark} />
+        </div>
+        <img src={posterAvatar} alt="poster" />
       </div>
-      <div className={s.filmName}>{filmName}</div>
+      <div className={s.filmName}>{movieType}</div>
     </div>
   );
 };
