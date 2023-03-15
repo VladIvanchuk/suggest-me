@@ -1,16 +1,20 @@
-import s from './DetailsPoster.module.scss';
-const DetailsPoster = ({movieType,movieName,poster}) => {
+import s from "./DetailsPoster.module.scss";
+const DetailsPoster = ({ data }) => {
   return (
     <div className={s.detailsPoster}>
-        <div className={s.poster} >
-            <img src={poster} alt="poster" />
-            <div className={s.info}>
-                <span className={s.movieType}>{movieType}</span>
-                <h2 className={s.movieName}>{movieName}</h2>
-            </div>
-        </div>
-    </div>
-  )
-}
+      <div className={s.poster}>
+        <img
+          src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`}
+          alt=""
+        />
 
-export default DetailsPoster
+        <div className={s.info}>
+          {/* <span className={s.movieType}>{data.genres[1].name}</span> */}
+          <h2 className={s.movieName}>{data.title}</h2>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default DetailsPoster;
