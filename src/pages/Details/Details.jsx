@@ -1,5 +1,5 @@
-import FilmCover from "../../components1/FilmCover/FilmCover";
-import FilmInfo from "../../components1/FilmInfo/FilmInfo";
+import FilmCover from "../../components/FilmCover/FilmCover";
+import FilmInfo from "../../components/FilmInfo/FilmInfo";
 import allFilms from "../../data/allFilms.json";
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
