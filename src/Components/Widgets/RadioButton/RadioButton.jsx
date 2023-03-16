@@ -1,17 +1,37 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import s from "./RadioButton.module.scss";
 
+const buttons = ["Any", "Action", "Horror", "Drama", "Comedy"];
+
 function RadioButton() {
-  const [selected, setSelected] = useState("label1");
+  const [selected, setSelected] = useState("Drama");
 
   const handleRadioChange = (event) => {
-    setSelected(event.target.value);
+    setSelected(event.target.id);
   };
+
+  useEffect(() => {
+    console.log(selected);
+  }, [selected]);
 
   return (
     <div className={s.RadioButton}>
-      <div className={s.RadioButton__inputs}>
+      {buttons.map((buttonName) => {
+        return (
+          <div key={buttonName} className={s.input_wrapper}>
+            <input
+              type="radio"
+              id={buttonName}
+              checked={selected === buttonName}
+              onChange={handleRadioChange}
+            />
+            <label htmlFor={buttonName}>{buttonName}</label>
+          </div>
+        );
+      })}
+
+      {/* <div className={s.RadioButton__inputs}>
         <input
           type="radio"
           name="options"
@@ -103,7 +123,7 @@ function RadioButton() {
         >
           Comedy<span>(120)</span>
         </label>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { Header, Home, Details, Error } from "./Components";
+import { Header } from "./Components";
 import Router from "./Components/Router/Router";
 
 function App() {
