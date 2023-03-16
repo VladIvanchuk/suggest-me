@@ -4,7 +4,7 @@ import s from "./FilmInfo.module.scss";
 import Container from "../Container/Container";
 import Rate from "../Rate/Rate";
 
-const FilmInfo = () => {
+const FilmInfo = (film) => {
   return (
     <Container>
       <div className={s.filmInfo}>
@@ -23,7 +23,7 @@ const FilmInfo = () => {
             order to the universe once and for all, no matter what
             consequences may be in store.
           </p>
-          <Rate rate={8.3}/>
+          <Rate rate={film.rate}/>
 
           <div className={s.filmInfo__info}>
             <h3 className={s.filmInfo__category}>

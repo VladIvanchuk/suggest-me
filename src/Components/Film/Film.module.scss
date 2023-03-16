@@ -1,4 +1,3 @@
-@use "./../../assets/utils/vars";
 @use "../../assets/utils/mixins";
 .film {
   @include mixins.flex-container;
@@ -11,8 +10,6 @@
   backdrop-filter: blur(40px);
   border-radius: 12px;
 
-  max-width: vars.$cardWidth;
-  max-height: 480px;
   margin-bottom: 20px;
 
   &__rate {
@@ -22,8 +19,6 @@
   }
 
   &__image {
-    max-width: 266px;
-    max-height: 400px;
     padding: 8px 8px 0 8px;
   }
 

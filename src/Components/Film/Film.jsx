@@ -9,6 +9,7 @@ import MoneyHeist from "./../../assets/images/Money-Heist.png";
 import Friends from "./../../assets/images/Friends.png";
 import BigBang from "./../../assets/images/Big-Bang.png";
 import TwoMan from "./../../assets/images/Two-Man.png";
+import {Link} from "react-router-dom";
 
 const allFilms = [
   BlackWidow,
@@ -23,7 +24,7 @@ const allFilms = [
 
 const Film = ({id, title, rate}) => (
   <li>
-    <a className={s.film} href={`/movie/${title}`}>
+    <Link className={s.film} to={`/details/${id}`}>
       <div className={s.film__rate}>
         <Rate rate={rate} />
       </div>
@@ -33,7 +34,7 @@ const Film = ({id, title, rate}) => (
         alt={title}
       />
       <h3 className={s.film__title}>{title}</h3>
-    </a>
+    </Link>
   </li>
 );
 

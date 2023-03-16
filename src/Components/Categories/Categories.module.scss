@@ -33,6 +33,12 @@
   }
 
   &__active {
+    display: block;
+    cursor: pointer ;
+
+    border-radius: 8px;
+    padding: 8px 32px;
+    @include mixins.default-semibold-text;
     background-color: #7b6ef6;
     color: #fff;
   }

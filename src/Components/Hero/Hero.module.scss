@@ -2,16 +2,15 @@
 @use "../../assets/utils/mixins";
 
 .hero {
-  text-align: left;
+  padding: 160px 0 72px;
 
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding-top: 80px;
-  padding-bottom: 72px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 
-  max-width: 588px;
-  max-height: 240px;
+    max-width: 530px;
+  }
 
   &__heading {
     font-weight: 600;

@@ -2,7 +2,7 @@ import Container from "../Container/Container";
 
 import s from "./FilmCover.module.scss"
 
-const FilmCover = () => {
+const FilmCover = (film) => {
   return (
     <div className={s.filmCover}>
       <Container>
@@ -13,7 +13,7 @@ const FilmCover = () => {
             </span>
 
             <h1 className={s.filmCover__title}>
-              Avengers: Endgame
+              {film.title}
             </h1>
           </div>
         </section>
