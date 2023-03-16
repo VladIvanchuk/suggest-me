@@ -1,6 +1,6 @@
-import Hero from "../../components/Hero/Hero";
-import Catalog from "../../components/Catalog/Catalog";
-import SuggestMe from "../../components/SuggestMe/SuggestMe";
+import Hero from "../../components1/Hero/Hero";
+import Catalog from "../../components1/Catalog/Catalog";
+import SuggestMe from "../../components1/SuggestMe/SuggestMe";
 
 import s from './Home.module.scss';
 
