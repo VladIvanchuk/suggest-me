@@ -6,7 +6,7 @@ import Details from "../pages/Details/Details";
 const Router = () => {
   return (
     <Routes>
-      <Route path="/movie" element={<Home />} />
+      <Route index element={<Home />} />
       <Route path="/details/:id" element={<Details />} />
     </Routes>
   );
