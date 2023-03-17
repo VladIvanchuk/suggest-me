@@ -1,11 +1,12 @@
-import { Button } from "../Button/Button";
-import s from "./Footer.module.scss";
+import s from './Footer.module.scss';
 
-export const Footer = () => {
+const Footer = () => {
   return (
-    <div className={s.wrapper}>
-      <h3>Didin’t find the one you looking for?</h3>
-      <Button name={"Suggest more"} />
+    <div className={s.Footer}>
+      <span>Didint find the one you looking for?</span>
+      <button>Suggest more</button>
     </div>
   );
 };
+
+export default Footer;
