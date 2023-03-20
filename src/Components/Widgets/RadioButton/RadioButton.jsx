@@ -4,10 +4,21 @@ import s from "./RadioButton.module.scss";
 
 const buttons = ["Any", "Action", "Horror", "Drama", "Comedy"];
 
-function RadioButton() {
+function RadioButton({ setMovie }) {
   const [selected, setSelected] = useState("Drama");
 
   const handleRadioChange = (event) => {
+    const getMovie = async () => {
+      const response = await fetch(
+        `https://movie-w83k.onrender.com/tmdb/movie?limit=8?genre=${selected.toLowerCase()}`
+      );
+
+      const movies = await response.json();
+
+      setMovie(movies);
+    };
+
+    getMovie();
     setSelected(event.target.id);
   };
 

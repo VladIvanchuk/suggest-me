@@ -4,16 +4,26 @@ import { useParams } from "react-router-dom";
 import { movies } from "../../../movies";
 import { useEffect, useState } from "react";
 
-
 const Details = () => {
   const [movie, setMovie] = useState({});
 
   const params = useParams();
 
   useEffect(() => {
-    const movie = movies.find((el) => el.id === Number(params.id));
+    // const movie = movies.find((el) => el.id === Number(params.id));
 
-    setMovie(movie);
+    const getMovie = async () => {
+      const response = await fetch(
+        `https://movie-w83k.onrender.com/tmdb/movie/${params.id}`
+      );
+
+      const movie = await response.json();
+
+      setMovie(movie);
+    };
+
+    getMovie();
+    // setMovie(movie);
   }, [params]);
 
   return (
