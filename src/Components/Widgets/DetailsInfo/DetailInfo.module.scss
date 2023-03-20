@@ -1,6 +1,10 @@
 @use "../../../scss" as *;
 .detailInfo {
   @include flex(center, space-between);
+  @include tablet{
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .left,

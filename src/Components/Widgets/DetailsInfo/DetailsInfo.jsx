@@ -2,13 +2,13 @@ import s from "./DetailInfo.module.scss";
 
 import { Mark } from "../../index";
 
-  const DetailsInfo = ({data}) => {
-  console.log(data.vote_average);
+const DetailsInfo = ({ data }) => {
+  console.log(data);
 
   return (
     <div className={s.detailInfo}>
       <div className={s.left}>
-      <img
+        <img
           src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
           alt=""
         />
@@ -16,7 +16,7 @@ import { Mark } from "../../index";
       <div className={s.right}>
         <div className={s.qoute}>{data.tagline}</div>
         <div className={s.desc}>{data.overview}</div>
-        <Mark markNum = {data.vote_average}/>
+        <Mark markNum={data.vote_average} />
         <div className={s.smallInfo}>
           <span className={s.infoType}>Type</span>
           <span className={s.infoTypeResult}></span>
@@ -31,7 +31,9 @@ import { Mark } from "../../index";
         </div>
         <div className={s.smallInfo}>
           <span className={s.infoType}>Genres</span>
-          <span className={s.infoTypeResult}></span>
+          <span className={s.infoTypeResult}>
+            {data.genres && data.genres.map((genre) => genre.name).join(", ")}
+          </span>
         </div>
       </div>
     </div>

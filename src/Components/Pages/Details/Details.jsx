@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const Details = () => {
-  const [movie, setMovie] = useState({});
+  const [movie, setMovie] = useState({genres:[]});
 
   const params = useParams();
   useEffect(() => {
