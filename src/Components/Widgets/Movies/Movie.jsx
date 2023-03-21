@@ -1,14 +1,14 @@
 import { Mark } from "../../";
 import s from "./Movies.module.scss";
 
-export const Movie = ({ name, mark, posterImg }) => {
+export const Movie = ({ title, rating, posterUrl }) => {
   return (
     <div className={s.card}>
-      <Mark className={s.mark} mark={8.3} />
+      <Mark className={s.mark} mark={rating} />
       <div className={s.photo}>
-        <img src={posterImg} alt="" />
+        <img src={posterUrl} alt="" />
       </div>
-      <div className={s.name}>{name}</div>
+      <div className={s.name}>{title}</div>
     </div>
   );
 };

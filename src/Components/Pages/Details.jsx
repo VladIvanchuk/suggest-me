@@ -1,31 +1,25 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { DetailsHero, DetailsBody } from "../";
-import movies from "../../mock/movies.json";
+import { api } from "../../api/api";
 
 export const Details = () => {
   const params = useParams();
   const [movie, setMovie] = useState({});
 
   useEffect(() => {
-    const movie = movies.find((el) => el.id === Number(params.id));
+    const getMovieList = async () => {
+      const data = await api.getMovieById(params.id);
 
-    setMovie(movie);
-  }, [params]);
+      setMovie(data);
+    };
+    getMovieList();
+  }, [params.id]);
 
   return (
     <>
-      <DetailsHero genre={movie.mainGenre} name={movie.name} img={movie.posterImg} />
-      <DetailsBody
-        img={movie.img}
-        quote={movie.quote}
-        description={movie.description}
-        mark={movie.mark}
-        type={movie.type}
-        date={movie.date}
-        time={movie.time}
-        genres={movie.genres}
-      />
+      <DetailsHero {...movie} />
+      <DetailsBody {...movie} />
     </>
   );
 };
