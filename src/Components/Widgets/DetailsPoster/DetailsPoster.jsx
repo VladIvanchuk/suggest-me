@@ -1,10 +1,10 @@
 import s from "./DetailsPoster.module.scss";
-const DetailsPoster = ({ data }) => {
+const DetailsPoster = ({data}) => {
   return (
     <div className={s.detailsPoster}>
       <div className={s.poster}>
         <img
-          src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`}
+          src={data.backdrop}
           alt=""
         />
 

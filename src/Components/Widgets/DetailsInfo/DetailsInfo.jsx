@@ -3,27 +3,22 @@ import s from "./DetailInfo.module.scss";
 import { Mark } from "../../index";
 
 const DetailsInfo = ({ data }) => {
-  console.log(data);
-
   return (
     <div className={s.detailInfo}>
       <div className={s.left}>
-        <img
-          src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
-          alt=""
-        />
+        <img src={data.posterUrl} alt="" />
       </div>
       <div className={s.right}>
         <div className={s.qoute}>{data.tagline}</div>
-        <div className={s.desc}>{data.overview}</div>
-        <Mark markNum={data.vote_average} />
+        <div className={s.desc}>{data.description}</div>
+        <Mark markNum={data.rating} />
         <div className={s.smallInfo}>
           <span className={s.infoType}>Type</span>
-          <span className={s.infoTypeResult}></span>
+          <span className={s.infoTypeResult}>{data.type}</span>
         </div>
         <div className={s.smallInfo}>
           <span className={s.infoType}>Release Date:</span>
-          <span className={s.infoTypeResult}>{data.release_date}</span>
+          <span className={s.infoTypeResult}>{data.releaseDate}</span>
         </div>
         <div className={s.smallInfo}>
           <span className={s.infoType}>Run time</span>

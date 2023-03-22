@@ -7,7 +7,7 @@ const Mark = ({markNum}) => {
     <div className={s.mark}>
       <div className={s.mark__bcg}>
         {svgMaker("star", s.icon)}
-        <span>{markNum}</span>
+        <span>{markNum.toFixed(1)}</span>
       </div>
     </div>
   );

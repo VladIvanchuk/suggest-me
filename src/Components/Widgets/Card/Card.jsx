@@ -1,14 +1,14 @@
 import s from "./Card.module.scss";
 import { Mark } from "../..";
 
-const Card = (data) => {
+const Card = ({data}) => {
   return (
     <div className={s.Card}>
       <div className={s.image}>
-        <img src={`https://image.tmdb.org/t/p/w500${data.data.poster_path}`} alt="" />
-        <Mark markNum = {data.data.vote_average}/>
+        <img src={data.posterUrl} alt="" />
+        <Mark markNum = {data.rating}/>
       </div>
-      <div className={s.filmName}>{data.data.title}</div>
+      <div className={s.filmName}>{data.title}</div>
     </div>
   );
 };
