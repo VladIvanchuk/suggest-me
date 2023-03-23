@@ -1,0 +1,30 @@
+@use "../../../scss" as *;
+
+.mark {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+
+  &__bcg {
+    padding: 10px 8px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+
+    svg {
+      fill: #FFAD49;
+      width: 16px;
+      height: 16px;
+    }
+
+    span {
+      line-height: 24px;
+      margin-left: 6px;
+      color: #FFAD49;
+    }
+  }
+}
