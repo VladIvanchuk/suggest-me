@@ -1,10 +1,9 @@
 import s from "./FilmsList.module.scss";
 import Film from "../Film/Film";
-import Films from "./ListOfFilms.json";
-const FilmsList = () => (
+const FilmsList = ({movieList}) => (
   <div className={s.filmsList}>
-    {Films.map(({title, id, img, rate}) => (
-      <Film key={id} title={title} id={id} img={img} rate={rate}/>
+    {movieList.map(({title, _id, posterUrl, rating}) => (
+      <Film key={_id} title={title} id={_id} img={posterUrl} rate={Math.round(rating)}/>
     ))}
   </div>
 );
