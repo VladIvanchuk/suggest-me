@@ -43,3 +43,46 @@ input {
   label {
     margin-right: 20px;
   }
+
+
+/*
+@use "../../../scss" as *;
+
+.RadioButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(40px);
+  border-radius: 12px;
+  width: max-content;
+  height: 56px;
+  padding: 8px;
+}
+
+.input_wrapper {
+  input {
+    display: none;
+  }
+
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 110px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #8e95a9;
+  }
+
+  input:checked ~ label {
+    background: #7b6ef6;
+    color: #ebe9fe;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+*/

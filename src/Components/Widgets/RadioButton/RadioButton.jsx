@@ -106,6 +106,59 @@ function RadioButton() {
       </div>
     </div>
   );
+
+  /*import React, { useEffect, useState } from "react";
+import s from "./RadioButton.module.scss";
+
+const buttons = ["Any", "Action", "Horror", "Drama", "Comedy"];
+
+function RadioButton({ setMovie }) {
+  const [selected, setSelected] = useState("Any");
+
+  const handleRadioChange = (event) => {
+    const getMovie = async () => {
+      const response = await fetch(
+        `https://movie-w83k.onrender.com/tmdb/movie?limit=8?genre=${selected.toLowerCase()}`
+      );
+
+      const movies = await response.json();
+
+      setMovie(movies);
+    };
+
+    getMovie();
+    setSelected(event.target.id);
+  };
+
+  useEffect(() => {
+    console.log(selected);
+  }, [selected]);
+
+  return (
+    <div className={s.RadioButton}>
+      {buttons.map((buttonName) => {
+        return (
+          <div key={buttonName} className={s.input_wrapper}>
+            <input
+              type="radio"
+              id={buttonName}
+              checked={selected === buttonName}
+              onChange={handleRadioChange}
+            />
+            <label htmlFor={buttonName}>{buttonName}</label>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
 export default RadioButton;
+*/
+}
+
+export default RadioButton;
+
+
+
+
