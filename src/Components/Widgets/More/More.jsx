@@ -1,11 +1,13 @@
 import { Button } from "../../UI/Button/Button";
 import s from "./More.module.scss";
 
-export const More = () => {
+export const More = ({ getMoreMovies }) => {
   return (
     <div className={s.wrapper}>
-      <h3>Didin’t find the one you looking for?</h3>
-      <Button name={"Suggest more"} />
+      <h3>Didn’t find the one you’re looking for?</h3>
+      <div className={s.primary} onClick={getMoreMovies}>
+        <span>Suggest more</span>
+      </div>
     </div>
   );
 };

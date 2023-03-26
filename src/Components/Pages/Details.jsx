@@ -7,6 +7,8 @@ export const Details = () => {
   const params = useParams();
   const [movie, setMovie] = useState({});
 
+  console.log(movie);
+
   useEffect(() => {
     const getMovieList = async () => {
       const data = await api.getMovieById(params.id);

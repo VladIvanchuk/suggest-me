@@ -2,12 +2,11 @@ import { Mark } from "../../UI/Mark/Mark";
 import s from "./DetailsBody.module.scss";
 
 export const DetailsBody = (props) => {
-  const { posterUrl, tagline, description, rating, type, releaseDate, runtime, genres } =
-    props;
+  const { poster, tagline, description, rating, releaseDate, runTime, genres } = props;
   return (
     <div className={s.wrapper}>
       <div className={s.photo}>
-        <img src={posterUrl} alt="" />
+        <img src={poster} alt="" />
       </div>
       <div className={s.info}>
         <h3>{tagline}</h3>
@@ -15,7 +14,7 @@ export const DetailsBody = (props) => {
         <Mark className={s.mark} mark={rating} />
         <div>
           <div className={s.title}>Type</div>
-          <div className={s.text}>{type}</div>
+          <div className={s.text}>Movie</div>
         </div>
         <div>
           <div className={s.title}>Release Date:</div>
@@ -23,14 +22,12 @@ export const DetailsBody = (props) => {
         </div>
         <div>
           <div className={s.title}>Run time</div>
-          <div className={s.text}>{runtime}</div>
+          <div className={s.text}>{runTime}</div>
         </div>
         <div>
           <div className={s.title}>Genres</div>
           <div className={s.text}>
-            {genres?.map(
-              (genre, i) => genre.name + (i !== genres.length - 1 ? ", " : "")
-            )}
+            {genres?.map((genre, i) => genre + (i !== genres.length - 1 ? ", " : ""))}
           </div>
         </div>
       </div>

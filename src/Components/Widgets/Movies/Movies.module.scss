@@ -2,7 +2,7 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
   grid-row-gap: 20px;
   grid-column-gap: 24px;
   width: 100%;
@@ -23,27 +23,52 @@
     transform: scale(1.035);
     transition: 0.2s;
   }
+  .name_loader {
+    display: none;
+  }
+}
+.card_loader {
+  background-color: $page-color;
+  height: 512px;
+  animation: card-loading 2.5s linear infinite;
+  cursor: auto;
+  .name_loader {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  &:hover {
+    transform: none;
+  }
 }
 .mark {
   position: absolute;
   margin: 8px 10px;
   z-index: 2;
 }
+.mark_loader {
+  position: absolute;
+  margin: 8px 10px;
+  width: 60px;
+  height: 32px;
+  background: #1a2032 !important;
+  z-index: 2;
+  svg {
+    display: none;
+  }
+}
 .photo {
   height: 400px;
   width: 100%;
-  background-color: #191e2e;
+  background-color: $card-color;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
-  img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: auto;
-    height: 100%;
-  }
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.photo_loader {
+  animation: loading 2.5s linear infinite;
 }
 .name {
   padding: 8px;
@@ -51,7 +76,47 @@
   font-size: 16px;
   font-weight: 600;
 }
+.name_none {
+  width: 150px;
+  height: 16px;
+  background: $card-color;
+  border-radius: 8px;
+  animation: loading 2.5s linear infinite;
+}
+.bottom {
+  display: flex;
+  gap: 8px;
+}
+.dot {
+  width: 16px;
+  height: 16px;
+  background: $card-color;
+  border-radius: 8px;
+  animation: loading 2.5s linear infinite;
+}
 .link {
   text-decoration: none;
   color: $txt-color-main;
+}
+@keyframes card-loading {
+  0% {
+    background-color: $card-color;
+  }
+  50% {
+    background-color: $page-color;
+  }
+  100% {
+    background-color: $card-color;
+  }
+}
+@keyframes loading {
+  0% {
+    background-color: $page-color;
+  }
+  50% {
+    background-color: $card-color;
+  }
+  100% {
+    background-color: $page-color;
+  }
 }

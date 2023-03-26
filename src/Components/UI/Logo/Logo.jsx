@@ -1,10 +1,11 @@
 import s from "./Logo.module.scss";
 import icon from "../../../assets/images/logo.svg";
+import { Link } from "react-router-dom";
 
 export const Logo = () => {
   return (
-    <div className={s.logo}>
+    <Link to="/" className={s.logo}>
       <img src={icon} alt="logo" />
-    </div>
+    </Link>
   );
 };

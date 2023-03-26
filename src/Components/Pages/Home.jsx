@@ -1,24 +1,31 @@
 import { useEffect, useState } from "react";
 import { MoviesWrapper, Filter, SuggestMe, More } from "..";
 import { api } from "../../api/api";
+
 export const Home = () => {
   const [movies, setMovies] = useState([]);
+  const [pending, setPending] = useState(true);
+  const [selectedGenre, setSelectedGenre] = useState("");
+
+  const getMovieList = async (count, genre) => {
+    setMovies([]);
+    setPending(true);
+    const data = await api.getMoviesByGenre(count, genre);
+    setMovies(data);
+    setPending(false);
+    console.log(data);
+  };
 
   useEffect(() => {
-    const getMovieList = async () => {
-      const data = await api.getMovies(8);
-
-      setMovies(data);
-    };
-    getMovieList();
-  }, []);
+    getMovieList(8, selectedGenre);
+  }, [selectedGenre]);
 
   return (
     <>
       <SuggestMe />
-      <Filter />
-      <MoviesWrapper movies={movies} />
-      <More />
+      <Filter length={movies.length} setSelectedGenre={setSelectedGenre} />
+      <MoviesWrapper movies={!pending && movies} />
+      <More getMoreMovies={() => getMovieList(8, selectedGenre)} />
     </>
   );
 };

@@ -1,26 +1,37 @@
 import s from "./Filter.module.scss";
 import { useState } from "react";
 
-const genres = ["Any", "Action", "Horror", "Drama", "Comedy"];
+const genres = [
+  { name: "any", title: "Any" },
+  { name: "action", title: "Action" },
+  { name: "horror", title: "Horror" },
+  { name: "drama", title: "Drama" },
+  { name: "comedy", title: "Comedy" },
+];
 
-export const Filter = () => {
+export const Filter = ({ length, setSelectedGenre }) => {
   const [selected, setSelected] = useState(genres[0]);
+
+  const handleClick = (genre) => {
+    setSelected(genre);
+    setSelectedGenre(genre.name);
+  };
 
   return (
     <>
       <div className={s.genre}>
-        {genres.map((genre, i) => (
+        {genres.map((genre) => (
           <button
-            key={i}
+            key={genre.name}
             className={selected === genre ? s.active : ""}
-            onClick={() => setSelected(genre)}
+            onClick={() => handleClick(genre)}
           >
-            {genre}
+            {genre.title}
           </button>
         ))}
       </div>
       <h2 className={s.header}>
-        {selected} <span>(120)</span>
+        {selected.title} <span>{length !== 0 && `(${length})`}</span>
       </h2>
     </>
   );
