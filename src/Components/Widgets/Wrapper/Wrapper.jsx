@@ -2,27 +2,15 @@
 import s from "./Wrapper.module.scss";
 import { Card } from "../../index";
 import { Link } from "react-router-dom";
-import { getMovies } from "../../../apiConfig/apiRequest"; // Import the API function
 
-import { useEffect, useState } from "react";
-
-const Wrapper = () => {
-  const [movie, setMovie] = useState([]);
-
-  useEffect(() => {
-    const fetchPopularMovies = async () => {
-      const data = await getMovies();
-      setMovie(data);
-    };
-    fetchPopularMovies();
-  }, []);
+const Wrapper = ({movie}) => {
 
   return (
     <div className={s.Wrapper}>
-      {movie.map((movie) => (
+      {movie.slice(0,8).map((movie) => (
         <Link to={`/details/${movie._id}`} key={movie._id}>
-          <Card data={movie} />
-        </Link>
+           <Card data={movie} />
+        </Link>  
       ))}
     </div>
   );

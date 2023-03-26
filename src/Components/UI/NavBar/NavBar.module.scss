@@ -1,4 +1,8 @@
-.navBar {
+@use '../../../scss/' as *;
+.navBar {   
+    @include mobile {
+        display: none;
+    }
     a+a {
         margin-left: 48px;
     }

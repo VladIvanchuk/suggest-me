@@ -14,7 +14,6 @@ const Details = () => {
     const fetchMovieDetails = async () => {
       const data = await getMovieDetails(params.id);
       setMovie(data);
-      console.log(data.data.rating)
     };
     fetchMovieDetails();
   }, [params.id]);

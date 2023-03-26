@@ -14,7 +14,7 @@ export const getPopularMovies = async () => {
 export const getMovies = async () => {
   try {
     const response = await fetch(
-      `https://movie-w83k.onrender.com/tmdb/movie?limit=8`
+      `https://movie-w83k.onrender.com/movie/page/1`
     );
     const data = await response.json();
     return data;
@@ -24,11 +24,10 @@ export const getMovies = async () => {
   }
 };
 
-// const API_KEY = "3b76611b97ee9546a88b0238260eed97";
 
 export const getMovieDetails = async (id) => {
   const response = await fetch(
-    `https://movie-w83k.onrender.com/tmdb/movie/${id}`
+    `https://movie-w83k.onrender.com/movie/details/${id}`
   );
   const data = await response.json();
   return data;

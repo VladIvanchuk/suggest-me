@@ -10,7 +10,7 @@ const DetailsPoster = ({data}) => {
 
         <div className={s.info}>
           <span className={s.movieType}>{data?.genres[0]?.name}</span>
-          <h2 className={s.movieName}>{data.title}</h2>
+          <h2 className={s.movieName}>{data?.title}</h2>
         </div>
       </div>
     </div>

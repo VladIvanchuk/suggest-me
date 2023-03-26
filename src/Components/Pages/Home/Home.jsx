@@ -1,11 +1,10 @@
-import { SuggestMe, Ganre, Wrapper,Footer } from "../../../Components";
+import { SuggestMe, Ganre,Footer } from "../../../Components";
 
 const Body = () => {
   return (
     <div>
       <SuggestMe />
       <Ganre />
-      <Wrapper />
       <Footer/>
     </div>
   );
